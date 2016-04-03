@@ -1,0 +1,19 @@
+<h2>NYC Figures</h2>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Titles</th>
+    <th>Landmarks</th>
+  </tr>
+  <%Figure.all.each do |figure| %>
+  <tr>
+    <td><a href="/figures/<%= figure.id %>"><%= figure.name %></a></td>
+    <td><% figure.titles.each do |t| %>
+      <%= t.name  %><br>
+    <%end%></td>
+   <td><% figure.landmarks.each do |l| %>
+        <%=l.name%><br>
+      <%end%></td>
+  </tr>
+  <%end%>
+</table>

@@ -1,0 +1,15 @@
+<h2>NYC Landmarks</h2>
+ <table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Year Completed</th>
+  </tr>
+  <%Landmark.all.each do |landmark| %>
+  <tr>
+    <td><a href="/landmarks/<%=landmark.id%>"><%= landmark.name %></a></td>
+    <td><%= landmark.year_completed %></td>
+  </tr>
+  <%end%>
+</table>
+<p><a class="button" href="/landmarks/new">New landmark</a> | 
+<a class="button" href="/figures">View Figures</a></p>
